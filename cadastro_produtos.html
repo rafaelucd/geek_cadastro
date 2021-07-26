@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="UTF-8"/>
+      <title>Landing Page - Hiring Coders</title>
+      <link rel = "preconnect" href = "https://fonts.googleapis.com">
+      <link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+      <script src="js/script.js"></script>
+</head>
+<body>
+   <header>
+      <div class="header">
+        <div class="logo">
+           <div class="logoimg"></div>
+        </div>
+        <div class="menu">
+          <nav>
+              <ul>
+                  <li class="active"><a href="index.html">Home</a></li>
+                  <li><a href="">Sobre nós</a></li>
+                  <li><a href="cadastro_produtos.html">Cadastro de Produtos</a></li>
+                  <li><a href="cadastro_clientes.html">Cadastro de Clientes</a></li>
+                  <li><a href="">Contato</a></li>
+                  <li>
+                    <a href="index.html" title="Entrar">  
+                       <img src="assets/icomoon/user.ico" alt="Entrar"/>           
+                    </a> 
+                   </li>
+              </ul>
+          </nav>
+        </div>
+      </div>
+  </header>
+   <div></br></br></div>
+   <div class="container-fluid">
+      <div class="row">
+         <div class="col-md-3" align="center">
+            <img src="media/wok.jpg" img-fluid alt="Example" width="220"  height="300">
+         </div>
+         <div class="col-md-9">
+            <main class="container">
+               <form class="row g-4" id="form" method="POST" action="">
+                  <h1>Cadastro de Produtos</h1></br>
+                  <div class="col-md-3">
+                     <label for="inputText" class="form-label">Nome do Produto</label>
+                     <input type="name" class="form-control" id="name" name="name" required data-rules="required|min=2"/>
+                  </div>
+                  <div class="col-md-2">
+                     <label for="inputText" class="form-label">Código</label>
+                     <input type="number" class="form-control" id="codigo" name="codigo" required pattern="\d*" placeholder=""/>
+                  </div>
+                  <div class="col-md-3">
+                     <label for="inputText" class="form-label">Marca</label>
+                     <input type="text" class="form-control" id="marca" name="marca" required  placeholder=""
+                        data-rules="required"/>
+                  </div>
+                  <div class="col-md-3">
+                     <label for="inputText" class="form-label">Modelo</label>
+                     <input type="text" class="form-control" id="modelo" name="modelo" placeholder=""/>
+                  </div>
+                  <div class="col-2">
+                     <label for="inputText" class="form-label">Unidade</label>
+                     <select id="unidade" class="form-select">
+                        <option value="" selected></option>
+                        <option value="KG">Quilograma</option>
+                        <option value="LT">Litro</option>
+                        <option value="UN">Unidade</option>
+                        <option value="MT">Metro linear</option>
+                        <option value="M2">Metro quadrado</option>
+                        <option value="M3">Metro cúbico</option>
+                        <option value="PR">Par</option>
+                        <option value="KW">Quilowatt hora</option>                    
+                     </select>
+                  </div>
+                  <div class="col-2">
+                     <label for="inputText" class="form-label">Estoque atual</label>
+                     <input type="number" class="form-control" name="estoque" id="estoque" required pattern="[0-9]+$" maxlength="11"
+                         data-rules="required|min=11">
+                  </div>
+                  <div class="col-md-2">
+                     <label for="inputText" class="form-label">Estoque Mínimo</label>
+                     <input type="number" class="form-control" name="estoquemin" id="estoquemin" required/>
+                  </div>
+                  <div class="col-md-2">
+                     <label for="inputText" class="form-label">Valor de Custo</label>
+                     <input type="text" class="form-control" name="vlcusto"  id="vlcusto" onKeyUp="mascaraMoeda(this, event)"  required/>
+                  </div>
+                  <div class="col-md-2">
+                     <label for="inputCity" class="form-label">Valor de Venda</label>
+                     <input type="text" class="form-control" name="vlvenda" id="vlvenda"  onKeyUp="mascaraMoeda(this, event)"  required/>
+                  </div>
+                  <div class="col-md-3">
+                     <label for="inputText" class="form-label">Data de Cadastro</label>
+                     <input type="date" class="form-control" name="date" id="date"  placeholder="" required/>
+                  </div> 
+                  <div class="col-2">
+                     <label for="inputText" class="form-label">Status</label>
+                     <select id="status" class="form-select">
+                        <option value="" selected></option>
+                        <option value="Ativo">Ativo</option>
+                        <option value="Inativo">Inativo</option>                                        
+                     </select>
+                  </div>               
+                  <label>                    
+                     <input type="submit" value="Cadastrar" class="btn btn-primary" />
+                  </label>
+               </form>
+         </div>
+      </div>
+   </div>
+   <div>
+   </div>
+   </div>
+   <div></br></br></div>
+   <div class="container-fluid">
+         <table class="table table-success table-striped" align="center">
+            <thead>
+               <tr class="table-sucess">
+                  <th>Nome do Produto</th>
+                  <th>Código</th>
+                  <th>Marca</th>
+                  <th>Modelo</th>
+                  <th>Unidade</th>
+                  <th>Estoque</th>
+                  <th>Est. Mínimo</th>
+                  <th>Vl. Custo</th>
+                  <th>Vl. Venda</th>
+                  <th>Data/Cadastro</th>
+                  <th>Status</th>
+               </tr>
+            </thead>
+            <tbody id="tabela-produtos" align="margin-left">
+            </tbody>
+         </table>
+   </div>
+   </main>
+   </div>
+   </div>
+   <script src="js/cadastroproduto.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+
+</html>
