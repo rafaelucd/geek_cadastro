@@ -15,7 +15,6 @@ form.addEventListener("submit", (e) => {
     let cidade = document.getElementById("cidade").value;
     let UF = document.getElementById("UF").value;
     let pais = document.getElementById("pais").value;
-    let end_entrega = document.getElementById("end_entrega").value;
     
 
     let dados = {
@@ -31,7 +30,6 @@ form.addEventListener("submit", (e) => {
         cidade,
         UF,
         pais,
-        end_entrega,
 
     };
   
